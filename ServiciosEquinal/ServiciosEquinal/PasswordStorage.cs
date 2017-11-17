@@ -2,7 +2,7 @@
 using System.Text;
 using System.Security.Cryptography;
 
-
+//Codigo de password
 namespace ServiciosEquinal
 {
     public class InvalidHashException : Exception
