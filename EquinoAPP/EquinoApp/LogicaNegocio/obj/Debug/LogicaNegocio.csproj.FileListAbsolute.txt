@@ -1,0 +1,6 @@
+C:\Users\usuario\Documents\Visual Studio 2017\Projects\EquinoAPP\EquinoApp\LogicaNegocio\bin\Debug\LogicaNegocio.dll
+C:\Users\usuario\Documents\Visual Studio 2017\Projects\EquinoAPP\EquinoApp\LogicaNegocio\bin\Debug\LogicaNegocio.pdb
+C:\Users\usuario\Documents\Visual Studio 2017\Projects\EquinoAPP\EquinoApp\LogicaNegocio\obj\Debug\LogicaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Documents\Visual Studio 2017\Projects\EquinoAPP\EquinoApp\LogicaNegocio\obj\Debug\LogicaNegocio.dll
+C:\Users\usuario\Documents\Visual Studio 2017\Projects\EquinoAPP\EquinoApp\LogicaNegocio\obj\Debug\LogicaNegocio.pdb
+C:\Users\usuario\Documents\Visual Studio 2017\Projects\EquinoAPP\EquinoApp\LogicaNegocio\bin\Debug\LogicaNegocio.dll.config
