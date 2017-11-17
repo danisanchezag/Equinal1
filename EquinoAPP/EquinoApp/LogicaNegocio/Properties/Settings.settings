@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LogicaNegocio.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LogicaNegocio_WsInicioSesion_WsInicioSesion" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:52295/WsInicioSesion.asmx</Value>
+    </Setting>
+    <Setting Name="LogicaNegocio_wsadmin_WsAdminEmpresas" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:52295/WsAdminEmpresas.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

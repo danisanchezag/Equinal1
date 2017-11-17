@@ -1,0 +1,68 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Equino</title>
+</head>
+<body>
+    <div> 
+
+        Ingrese el id del equino <input type="text" id="idequino" name="documento" value="" />
+        <input type="button" name="confirmar" id="botonIngresar" value="Ingresar al Examen" />
+
+
+
+
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+
+    var botonservidor = $("#botonIngresar");
+    var documento = $("#idequino").val();
+    botonservidor.click(function () {
+        // alert("jojojo");
+        $.ajax({
+            url: '@Url.Action("InformacionEquino", "Home")' ,
+            //Post, Get, Etc
+            type: 'POST',
+            async: true,
+            dataType: "json",
+            //Parametros
+            data: {"id": $("#idequino").val()},
+            error: function (response, status, error) {
+                console.log(error);
+            },
+            success: function (mess) {
+
+                alert(mess);
+                if (mess == "Puede iniciar el examen")
+                {
+                    var url = "http://localhost:55337/Home/Index?documento=" + $("#idequino").val();
+                    $(location).attr('href', url);
+
+                    var documento = $("#idequino").val();
+
+
+
+                }
+            },
+            beforeSend: function () {
+                console.log("Antes de enviar al server.....");
+
+            },
+            complete: function () {
+
+                console.log("Ya termino bien y se ejecuto el metodo Success");
+            }
+        });
+
+//    });
+    });
+</script>

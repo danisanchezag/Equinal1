@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CrearEmpresa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="replegal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ciudad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="correo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearEmpresaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearEmpresaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TraerEmpresa">
+        <s:complexType />
+      </s:element>
+      <s:element name="TraerEmpresaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TraerEmpresaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CrearEmpresaSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="CrearEmpresaSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TraerEmpresaSoapIn">
+    <wsdl:part name="parameters" element="tns:TraerEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="TraerEmpresaSoapOut">
+    <wsdl:part name="parameters" element="tns:TraerEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WsAdminEmpresasSoap">
+    <wsdl:operation name="CrearEmpresa">
+      <wsdl:input message="tns:CrearEmpresaSoapIn" />
+      <wsdl:output message="tns:CrearEmpresaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TraerEmpresa">
+      <wsdl:input message="tns:TraerEmpresaSoapIn" />
+      <wsdl:output message="tns:TraerEmpresaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WsAdminEmpresasSoap" type="tns:WsAdminEmpresasSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CrearEmpresa">
+      <soap:operation soapAction="http://tempuri.org/CrearEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraerEmpresa">
+      <soap:operation soapAction="http://tempuri.org/TraerEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WsAdminEmpresasSoap12" type="tns:WsAdminEmpresasSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CrearEmpresa">
+      <soap12:operation soapAction="http://tempuri.org/CrearEmpresa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraerEmpresa">
+      <soap12:operation soapAction="http://tempuri.org/TraerEmpresa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsAdminEmpresas">
+    <wsdl:port name="WsAdminEmpresasSoap" binding="tns:WsAdminEmpresasSoap">
+      <soap:address location="http://localhost:52295/WsAdminEmpresas.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WsAdminEmpresasSoap12" binding="tns:WsAdminEmpresasSoap12">
+      <soap12:address location="http://localhost:52295/WsAdminEmpresas.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
