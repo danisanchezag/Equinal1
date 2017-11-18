@@ -6,7 +6,7 @@ using LogicaNegocio.wsInicio;
 using System.Data;
 namespace LogicaNegocio
 {
-  //Clase de inicio sesión
+  //Clase de inicio sesión 2
   public  class LogicaInicioSesion
     {
         WsInicioSesion ws;
