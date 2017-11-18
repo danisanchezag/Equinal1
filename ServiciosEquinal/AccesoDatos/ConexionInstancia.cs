@@ -14,6 +14,7 @@ namespace AccesoDatos
         {
 
         }
+      //Garantizar una sola instancia
         public static Database getInstancia(string instancia)
         {
             if (Instancia == null)
