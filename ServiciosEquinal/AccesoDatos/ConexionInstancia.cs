@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace AccesoDatos
 {
    public class ConexionInstancia
-    { //ClaseActualizada
+    { //ClaseActualizada1
         static Database Instancia;
         private ConexionInstancia()
         {
