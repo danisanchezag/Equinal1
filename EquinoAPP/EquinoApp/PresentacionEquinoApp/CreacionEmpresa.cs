@@ -12,7 +12,7 @@ using LogicaNegocio;
 namespace PresentacionEquinoApp
 {
     public partial class CreacionEmpresa : Form
-    {
+    { // Prueba lince
         public CreacionEmpresa()
         {
             InitializeComponent();
